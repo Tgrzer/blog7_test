@@ -1,0 +1,33 @@
+<% include partials/header  %>
+
+
+<div class="container">
+
+
+	
+	<ul>
+		<li><%= blog.title %></li>
+		<a href="/blogs/<%=blog._id%>">  <li><img src="<%=blog.image %>"</li>  </a>
+		<li><%= blog.content %></li>
+	</ul>
+
+
+
+
+<a href="/blogs/<%=blog._id%>/edit"><button class="btn btn-primary">Edit post...</button></a>
+
+<form class="form-group" action='/blogs/<%=blog._id%>?_method=DELETE'   method="POST">
+	<button class="btn btn-primary">Delete Post</button>
+
+</form>
+
+<a href="/blogs"><button class="btn btn-primary">See all posts </button></a>
+
+
+
+
+</div>
+
+
+
+<% include partials/footer  %>
